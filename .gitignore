@@ -1,0 +1,48 @@
+# Ignore analysis and documentation files (keep only working app)
+PROSCRIBE_*.md
+*_ANALYSIS.md
+*_SUMMARY.md
+*_REFERENCE.md
+README_ANALYSIS.md
+IMPLEMENTATION_SUMMARY.md
+FINAL_STATUS_REPORT.md
+SETUP_GUIDE.md
+READY_TO_USE.md
+START_NOW.md
+
+# Ignore test and diagnostic files
+TEST_*.html
+CHECK_*.html
+DEBUG_*.html
+SIMPLE_TEST.html
+AUTO_TEST.html
+VALIDATE_*.html
+ERROR_CHECKER.html
+FORCE_CONNECT.html
+QUICK_FIX.html
+STATUS_CHECK.html
+
+# Ignore intermediate setup files
+SETUP_AND_GO.html
+SETUP_FIXED.html
+START_HERE.html
+QUICK_START.html
+
+# Ignore old/non-working versions
+neuroscribe_advanced.html
+neuroscribe_professional.html
+NEUROSCRIBE_COMPLETE.html
+neuroscribe_ADVANCED_RUNTIME.html
+
+# Ignore old security patches
+neuroscribe-secure-patch.js
+neuroscribe-runtime-patch.js
+secure-config.js
+
+# Ignore config with hardcoded keys
+config.js
+
+# Keep only the working version
+# NEUROSCRIBE_SIMPLE_WORKING.html - This is the main app!
+# enhanced-medical-dictionary.js - Medical terms dictionary
+# neuroscribe.js - Core functionality (with direct localStorage access)
