@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroScribe - Production Ready</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0066CC;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .version-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .version-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .version-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .version-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .recommended {
+            background: linear-gradient(135deg, #00A86B, #008C5A);
+            position: relative;
+        }
+
+        .recommended::before {
+            content: "⭐ RECOMMENDED";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .docs {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+        }
+
+        .docs h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .docs a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 10px 20px;
+            background: #0066CC;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .docs a:hover {
+            background: #0052A3;
+            transform: translateY(-2px);
+        }
+
+        .status {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 NeuroScribe</h1>
+        <p class="subtitle">AI-Powered Clinical Documentation</p>
+
+        <div class="status">
+            ✅ Server Running - Production Ready!
+        </div>
+
+        <h2 style="color: #333; margin-bottom: 20px;">Choose Your Version</h2>
+
+        <div class="version-grid">
+            <a href="NEUROSCRIBE_SIMPLE_WORKING.html" class="version-card recommended">
+                <h2>Simple</h2>
+                <p>Essential features, fast & reliable</p>
+            </a>
+
+            <a href="NEUROSCRIBE_V3_TABS.html" class="version-card">
+                <h2>Tabs</h2>
+                <p>Organized tabbed interface</p>
+            </a>
+
+            <a href="NEUROSCRIBE_V4_CLINICAL.html" class="version-card">
+                <h2>Clinical</h2>
+                <p>Enhanced clinical features</p>
+            </a>
+
+            <a href="NEUROSCRIBE_V5_EXPERT.html" class="version-card">
+                <h2>Expert</h2>
+                <p>Advanced analysis engine</p>
+            </a>
+        </div>
+
+        <div class="docs">
+            <h3>📚 Documentation</h3>
+            <a href="QUICKSTART.md" target="_blank">Quick Start Guide</a>
+            <a href="DEPLOYMENT_GUIDE.md" target="_blank">Deployment Guide</a>
+            <a href="README.md" target="_blank">README</a>
+        </div>
+
+        <p style="margin-top: 30px; color: #999; font-size: 0.9rem;">
+            💡 First time? Configure your API key in the browser console.<br>
+            See the Quick Start Guide for instructions.
+        </p>
+    </div>
+</body>
+</html>
