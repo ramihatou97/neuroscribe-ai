@@ -29,19 +29,25 @@ A web-based application for generating structured neurosurgical clinical notes u
 
 NeuroScribe is a **100% client-side application** that runs entirely in your browser. Deploy it on your desktop in seconds:
 
-#### Option 1: Double-Click (Simplest)
-1. Download/clone this repository
-2. Double-click `NEUROSCRIBE_SIMPLE_WORKING.html`
-3. Configure API key (see below)
-4. Done! ✅
+#### Option 1: One-Click Launch (Easiest!)
+**Windows:** Double-click `launch-neuroscribe.bat`  
+**Mac/Linux:** Double-click `launch-neuroscribe.sh` (or run `./launch-neuroscribe.sh`)
 
-#### Option 2: Local Server (Recommended for Production)
+✨ **Automatically starts server AND opens browser!**
+
+#### Option 2: Manual Server Start
 **Windows:** Double-click `start-server.bat`  
 **Mac/Linux:** Run `./start-server.sh`  
 
-Then open: http://localhost:8080/NEUROSCRIBE_SIMPLE_WORKING.html
+Then manually open: http://localhost:8080/
 
-📖 **Full deployment guide:** [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
+#### Option 3: Direct File (No Server)
+1. Download/clone this repository
+2. Double-click `NEUROSCRIBE_SIMPLE_WORKING.html`
+3. Done! ✅
+
+📖 **Full deployment guide:** [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)  
+🖥️ **Desktop shortcuts:** [DESKTOP_SHORTCUTS.md](DESKTOP_SHORTCUTS.md)
 
 ---
 
