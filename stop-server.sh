@@ -42,7 +42,7 @@ else
         if [ -n "$PIDS" ]; then
             echo "Found servers on port 8080: $PIDS"
             echo "Stopping..."
-            kill "$PIDS" 2>/dev/null
+            echo "$PIDS" | xargs kill 2>/dev/null
             echo "✅ Stopped"
         else
             echo "No servers found on port 8080"
