@@ -21,25 +21,35 @@ A web-based application for generating structured neurosurgical clinical notes u
 - Copy to clipboard
 - Download as TXT file
 
-## Quick Start
+## 🚀 Quick Start
 
-### 1. Get Your API Key
+**Get started in under 5 minutes!** See **[QUICKSTART.md](QUICKSTART.md)** for the fastest setup.
 
-Get a FREE Google Gemini API key:
-1. Visit https://makersuite.google.com/app/apikey
-2. Click "Create API Key"
-3. Copy the key (starts with `AIza...`)
+### Desktop Deployment (No Docker/GitHub Pages Required)
 
-### 2. Open the App
+NeuroScribe is a **100% client-side application** that runs entirely in your browser. Deploy it on your desktop in seconds:
 
-Simply open `NEUROSCRIBE_SIMPLE_WORKING.html` in your web browser.
+#### Option 1: Double-Click (Simplest)
+1. Download/clone this repository
+2. Double-click `NEUROSCRIBE_SIMPLE_WORKING.html`
+3. Configure API key (see below)
+4. Done! ✅
 
-### 3. Configure API Key (First Time Only)
+#### Option 2: Local Server (Recommended for Production)
+**Windows:** Double-click `start-server.bat`  
+**Mac/Linux:** Run `./start-server.sh`  
 
-When you first open the app, if no API key is configured:
+Then open: http://localhost:8080/NEUROSCRIBE_SIMPLE_WORKING.html
 
-1. Open browser console (Cmd+Option+J on Mac, F12 on Windows)
-2. Paste this command (replace with your actual key):
+📖 **Full deployment guide:** [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
+
+---
+
+### API Key Setup (First Time Only)
+
+1. **Get FREE API key:** https://makersuite.google.com/app/apikey
+2. **Open browser console:** `Cmd+Option+J` (Mac) or `F12` (Windows)
+3. **Paste this code** (replace with your key):
 
 ```javascript
 const key = 'AIza...YOUR_KEY_HERE';
@@ -49,23 +59,35 @@ localStorage.setItem('neuroscribe_provider', 'gemini');
 location.reload();
 ```
 
-3. The page will reload and show green "✅ API Key Loaded - Ready to Generate"
+4. **Page reloads** → ✅ API Key Loaded - Ready to Generate
 
-### 4. Use the App
+---
 
-1. **Enter your clinical transcript** in the left panel
+### Using the App
+
+1. **Enter clinical transcript** in the left panel
 2. **Click "⚡ Generate Clinical Note"**
-3. **Review the AI-generated documentation** in the right panel
+3. **Review AI-generated documentation** in the right panel
 4. **Copy or download** the result
 
-## File Structure
+## 📁 File Structure
 
 ### Main Application
 - `NEUROSCRIBE_SIMPLE_WORKING.html` - Primary working app (standalone, all-in-one file)
 
+### Advanced Versions
+- `NEUROSCRIBE_V3_TABS.html` - Tabbed interface version
+- `NEUROSCRIBE_V4_CLINICAL.html` - Clinical features version
+- `NEUROSCRIBE_V5_EXPERT.html` - Expert analysis engine
+
+### Deployment Files
+- `start-server.sh` - Auto-start script for Mac/Linux
+- `start-server.bat` - Auto-start script for Windows
+- `QUICKSTART.md` - Fast 5-minute setup guide
+- `DEPLOYMENT_GUIDE.md` - Complete deployment documentation
+
 ### Supporting Files
 - `enhanced-medical-dictionary.js` - 505+ medical terms database
-- `neuroscribe.js` - Core application logic
 
 ## Technology Stack
 
