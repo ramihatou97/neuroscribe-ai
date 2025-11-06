@@ -12,17 +12,17 @@ PID_FILE="/tmp/neuroscribe-server.pid"
 if [ -f "$PID_FILE" ]; then
     SERVER_PID=$(cat "$PID_FILE")
     
-    if ps -p $SERVER_PID > /dev/null 2>&1; then
+    if ps -p "$SERVER_PID" > /dev/null 2>&1; then
         echo "Found running server (PID: $SERVER_PID)"
         echo "Stopping server..."
-        kill $SERVER_PID
+        kill "$SERVER_PID"
         
         # Wait a moment and verify
         sleep 1
         
-        if ps -p $SERVER_PID > /dev/null 2>&1; then
+        if ps -p "$SERVER_PID" > /dev/null 2>&1; then
             echo "⚠️  Server still running, forcing stop..."
-            kill -9 $SERVER_PID 2>/dev/null
+            kill -9 "$SERVER_PID" 2>/dev/null
         fi
         
         rm -f "$PID_FILE"
@@ -42,7 +42,7 @@ else
         if [ -n "$PIDS" ]; then
             echo "Found servers on port 8080: $PIDS"
             echo "Stopping..."
-            kill $PIDS 2>/dev/null
+            kill "$PIDS" 2>/dev/null
             echo "✅ Stopped"
         else
             echo "No servers found on port 8080"

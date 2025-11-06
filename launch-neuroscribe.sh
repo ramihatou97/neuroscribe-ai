@@ -53,7 +53,7 @@ if command_exists python3; then
     sleep 2
     
     # Check if server is running
-    if ps -p $SERVER_PID > /dev/null; then
+    if ps -p "$SERVER_PID" > /dev/null; then
         echo "✅ Server started (PID: $SERVER_PID)"
         echo ""
         echo "🌐 Opening NeuroScribe..."
@@ -78,10 +78,10 @@ if command_exists python3; then
         echo "Press Ctrl+C to stop server and exit..."
         
         # Wait for user interrupt
-        trap "echo ''; echo '🛑 Stopping server...'; kill $SERVER_PID 2>/dev/null; rm -f /tmp/neuroscribe-server.pid; echo '✅ Server stopped'; exit 0" INT TERM
+        trap "echo ''; echo '🛑 Stopping server...'; kill \"$SERVER_PID\" 2>/dev/null; rm -f /tmp/neuroscribe-server.pid; echo '✅ Server stopped'; exit 0" INT TERM
         
         # Keep script running
-        wait $SERVER_PID
+        wait "$SERVER_PID"
     else
         echo "❌ Server failed to start"
         exit 1
@@ -101,7 +101,7 @@ elif command_exists python; then
     echo "⏳ Waiting for server to start..."
     sleep 2
     
-    if ps -p $SERVER_PID > /dev/null; then
+    if ps -p "$SERVER_PID" > /dev/null; then
         echo "✅ Server started (PID: $SERVER_PID)"
         echo ""
         echo "🌐 Opening NeuroScribe..."
@@ -120,9 +120,9 @@ elif command_exists python; then
         echo ""
         echo "Press Ctrl+C to stop server and exit..."
         
-        trap "echo ''; echo '🛑 Stopping server...'; kill $SERVER_PID 2>/dev/null; rm -f /tmp/neuroscribe-server.pid; echo '✅ Server stopped'; exit 0" INT TERM
+        trap "echo ''; echo '🛑 Stopping server...'; kill \"$SERVER_PID\" 2>/dev/null; rm -f /tmp/neuroscribe-server.pid; echo '✅ Server stopped'; exit 0" INT TERM
         
-        wait $SERVER_PID
+        wait "$SERVER_PID"
     else
         echo "❌ Server failed to start"
         exit 1
